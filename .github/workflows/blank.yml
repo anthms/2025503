@@ -1,0 +1,13 @@
+on:
+  #push:
+  #pull_request:
+  workflow_dispatch:
+
+jobs:
+  job-name:
+    runs-on: macos-latest
+    steps:
+      - run: |
+          export HOMEBREW_NO_INSTALL_CLEANUP=1
+          brew update
+          brew install create-dmg gettext
